@@ -39,10 +39,10 @@ function mostrar($id = NULL) {
     return $row;
 }
 
-function inserir($nome_produto = NULL, $valor_produto = NULL, $marca_produto = NULL, $quant = NULL){
+function inserir($nome_produto = NULL, $valor_produto = NULL, $marca_produto = NULL, $quant = NULL, $valor_total){
     global $link;
-    $stmt = $link->prepare('INSERT INTO produtos (nome_produto, valor_produto, marca_produto, quant) VALUES (?, ?, ?, ?)');
-    $stmt->bind_param('sisi', $nome_produto, $valor_produto, $marca_produto, $quant);
+    $stmt = $link->prepare('INSERT INTO produtos (nome_produto, valor_produto, marca_produto, quant, valor_total) VALUES (?, ?, ?, ?, ?)');
+    $stmt->bind_param('sisii', $nome_produto, $valor_produto, $marca_produto, $quant, $valor_total);
     $stmt->execute();
     $stmt->close();
     $_SESSION['message'] = array('type'=>'success', 'msg'=>'Produto adicionado com sucesso!');

@@ -1,7 +1,8 @@
 <?php
     include('functions.php');
-    if (isset($_POST['btnInsert'])) :
-        inserir($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['quant']);
+    if (isset($_POST['btnInsert'])):
+        $valor_total = $_POST['valor_produto'] * $_POST['quant'];
+        inserir($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['quant'], $valor_total);
     endif;
 ?>
 <!DOCTYPE html>

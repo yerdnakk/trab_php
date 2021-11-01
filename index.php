@@ -25,6 +25,7 @@
                     <th>Valor do produto</th>
                     <th>Marca do produto</th>
                     <th>Quantidade</th>
+                    <th>Valor total em estoque</th>
                     <th></th>
                 </tr>
             </thead>
@@ -38,6 +39,7 @@
                                 <td>'.$produto['valor_produto'].'</td>
                                 <td>'.$produto['marca_produto'].'</td>
                                 <td>'.$produto['quant'].'</td>
+                                <td>'.$produto['valor_total'].'</td>
                                 <td class="text-right">
                                     <a href="update.php?id='.$produto['id'].'">Alterar</a>
                                     <a href="delete.php?id='.$produto['id'].'">Deletar</a>
