@@ -50,10 +50,10 @@ function inserir($nome_produto = NULL, $valor_produto = NULL, $marca_produto = N
     exit();
 }
 
-function alterar($nome_produto = NULL, $valor_produto = NULL, $marca_produto = NULL, $quant = NULL, $id){
+function alterar($nome_produto = NULL, $valor_produto = NULL, $marca_produto = NULL, $quant = NULL, $valor_total, $id){
     global $link;
-    $stmt = $link->prepare('UPDATE produtos SET nome_produto = ?, valor_produto = ?, marca_produto = ?, quant = ? WHERE id = ?');
-    $stmt->bind_param('sisii', $nome_produto, $valor_produto, $marca_produto, $quant, $id);
+    $stmt = $link->prepare('UPDATE produtos SET nome_produto = ?, valor_produto = ?, marca_produto = ?, quant = ?, valor_total = ? WHERE id = ?');
+    $stmt->bind_param('sisiii', $nome_produto, $valor_produto, $marca_produto, $quant, $valor_total, $id);
     $stmt->execute();
     if($stmt->affected_rows === 0):
         $_SESSION['message'] = array('type'=>'danger', 'msg'=>'Você não fez alterações.');

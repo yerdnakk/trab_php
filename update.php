@@ -1,6 +1,7 @@
 <?php
     include('functions.php');
-    if (isset($_POST['btnUpdate'])) :
+    if (isset($_POST['btnUpdate'])):
+        $valor_total = $_POST['valor_produto'] * $_POST['quant'];
         alterar($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['marca_produto'], $_POST['id']);
     endif;
     $user = (isset($_GET['id'])) ? mostrar($_GET['id']) : false;
@@ -18,7 +19,7 @@
     <?php include('tema/header.php'); ?>
     <div class="container-fluid">
         <?php if ($user != false) : ?>
-            <h1><em class="fa fa-pen-square"></em> Alterar</h1>
+            <h1>Alterar</h1>
             <form action="" method="post" class="form">
                 <input type="hidden" name="id" value="<?= $user['id']; ?>">
                 <div class="row">

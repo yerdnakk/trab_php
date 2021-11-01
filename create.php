@@ -17,7 +17,7 @@
 <body>
     <?php include('tema/header.php'); ?>
     <div class="container-fluid">
-        <h1><em class="fa fa-plus-circle"></em> Inserir</h1>
+        <h1>Inserir</h1>
         <form action="" method="post" class="form">
         <div class="row">
             <div class="col-md-6">
