@@ -1,9 +1,11 @@
 <?php
     include('functions.php');
-    if (isset($_POST['btnUpdate'])):
+    if (isset($_POST['alterar'])){
         $valor_total = $_POST['valor_produto'] * $_POST['quant'];
-        alterar($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['marca_produto'], $_POST['id']);
-    endif;
+        alterar($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['quant'], $valor_total, $_POST['id']);
+    } elseif (isset($_POST['voltar'])){
+        header('Location: index.php');
+    }
     $user = (isset($_GET['id'])) ? mostrar($_GET['id']) : false;
 ?>
 <!DOCTYPE html>
@@ -18,7 +20,7 @@
 <body>
     <?php include('tema/header.php'); ?>
     <div class="container-fluid">
-        <?php if ($user != false) : ?>
+        <?php if ($user != false){ ?>
             <h1>Alterar</h1>
             <form action="" method="post" class="form">
                 <input type="hidden" name="id" value="<?= $user['id']; ?>">
@@ -47,10 +49,11 @@
                     </div>
                 </div>
                 <button name="btnUpdate" class="btn btn-primary">Alterar Produto</button>
+                <button name="voltar" class="btn btn-primary">Voltar</button>
             </form>   
-        <?php else: ?>  
+        <?php }else{ ?>  
             <h1>Produto não encontrado.</h1>
-        <?php endif; ?> 
+        <?php } ?> 
     </div>
 </body>
 </html>

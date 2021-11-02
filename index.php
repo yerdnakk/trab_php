@@ -31,7 +31,7 @@
             </thead>
             <tbody>
                 <?php 
-                    foreach($produtos as $produto):
+                    foreach($produtos as $produto){
                         echo '
                             <tr>
                                 <td>'.$produto['id'].'</td>
@@ -46,7 +46,7 @@
                                 </td>
                             </tr>
                         ';
-                    endforeach;
+                    }
                 ?>
             </tbody>
         </table>

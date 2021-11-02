@@ -1,9 +1,12 @@
 <?php
     include('functions.php');
-    if (isset($_POST['btnInsert'])):
+    if (isset($_POST['inserir'])){
         $valor_total = $_POST['valor_produto'] * $_POST['quant'];
         inserir($_POST['nome_produto'], $_POST['valor_produto'], $_POST['marca_produto'], $_POST['quant'], $valor_total);
-    endif;
+    }
+    elseif (isset($_POST['voltar'])){
+        header('Location: index.php'); 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +46,8 @@
                     <br>
                 </div>
             </div>
-            <button name="btnInsert" class="btn btn-primary">Inserir Produto</button>
+            <button name="inserir" class="btn btn-primary">Inserir Produto</button>
+            <button name="voltar" class="btn btn-primary">Voltar</button>
         </form>  
     </div>
 </body>
