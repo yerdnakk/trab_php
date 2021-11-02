@@ -82,15 +82,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Registrar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Registrar</h2>
-        <p>Preencha abaixo para se registrar.</p>
+    <div class="wrapper center">
+        <h1>Registro</h1>
         <form action="registrar.php" method="post">
             <div class="form-group">
                 <label>Nome de usuário</label>
@@ -108,10 +104,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Confirmar">
+                <input type="submit" class="reg btn btn-primary" value="Confirmar">
                 <input type="reset" class="btn btn-secondary ml-2" value="Limpar">
             </div>
-            <p>Já possui uma conta? <a href="login.php">Logue aqui</a>.</p>
+            <p class="signup_link"><strong>Já possui uma conta? <a href="login.php">Logue aqui</strong></a></p>
         </form>
     </div>    
 </body>
