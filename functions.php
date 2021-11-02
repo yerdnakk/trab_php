@@ -46,7 +46,7 @@ function inserir($nome_produto = NULL, $valor_produto = NULL, $marca_produto = N
     $stmt->execute();
     $stmt->close();
     $_SESSION['message'] = array('type'=>'success', 'msg'=>'Produto adicionado com sucesso!');
-    header('Location: update.php?id='.$link->insert_id);
+    header('Location: index.php');
     exit();
 }
 

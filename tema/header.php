@@ -5,7 +5,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 ?>
 
-<?php $welcome = $_SESSION['username'].' (<a href="logout.php">Sair</a>)';?>
 <?php if(isset($_SESSION['message'])): ?>
     <div class="alert alert-<?php echo $_SESSION['message']['type']; ?>" role="alert">
         <?= $_SESSION['message']['msg']; ?>
@@ -22,7 +21,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <ul>
                         <li><a href="index.php">Painel</a></li>
                         <li><a href="create.php">Novo produto</a></li>               
-                        <li><?= 'Welcome, <strong>'. $welcome. '</strong>'; ?></li>
+                        <li><?= 'Welcome, <strong>'. $_SESSION['username']. '</strong> (<a href="logout.php">Sair</a>)'; ?></li>
                     </ul>
                 </nav>
             </div>

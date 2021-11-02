@@ -41,8 +41,8 @@
                                 <td>'.$produto['quant'].'</td>
                                 <td>'.$produto['valor_total'].'</td>
                                 <td class="text-right">
-                                    <a href="update.php?id='.$produto['id'].'">Alterar</a>
-                                    <a href="delete.php?id='.$produto['id'].'">Deletar</a>
+                                    <a class="btn btn-primary" href="update.php?id='.$produto['id'].'">Alterar</a>
+                                    <a class="btn btn-danger" href="delete.php?id='.$produto['id'].'">Deletar</a>
                                 </td>
                             </tr>
                         ';
