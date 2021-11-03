@@ -20,7 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <nav>
                     <ul>
                         <li><a href="create.php">Novo produto</a></li>               
-                        <li><?= 'Welcome, <strong>'. $_SESSION['username']. '</strong> (<a href="logout.php">Sair</a>)'; ?></li>
+                        <li><?= '<strong>'. $_SESSION['username']. '</strong> (<a href="logout.php">Sair</a>)'; ?></li>
                     </ul>
                 </nav>
             </div>
