@@ -16,7 +16,7 @@
 <body>
     <?php include('tema/header.php'); ?>
     <div class="container-fluid">
-        <h1>Base de produtos</h1>
+        <h1>Base de Produtos</h1>
         <table class="table table-striped">
             <thead>
                 <tr>
