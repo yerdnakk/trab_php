@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="col-md-11 text-right">
                 <nav>
                     <ul>
-                        <li><a href="create.php">Novo produto</a></li>               
+                        <li><a class="btn btn-primary" href="create.php">Novo produto</a></li>               
                         <li><?= '<strong>'. $_SESSION['username']. '</strong> (<a href="logout.php">Sair</a>)'; ?></li>
                     </ul>
                 </nav>

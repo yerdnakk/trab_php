@@ -48,7 +48,7 @@
                         <br>
                     </div>
                 </div>
-                <button name="alterar" class="btn btn-primary">Alterar Produto</button>
+                <button name="alterar" class="btn btn-primary">Alterar</button>
                 <button name="voltar" class="btn btn-primary">Voltar</button>
             </form>   
         <?php }else{ ?>  

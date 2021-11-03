@@ -46,7 +46,7 @@
                     <br>
                 </div>
             </div>
-            <button name="inserir" class="btn btn-primary">Inserir Produto</button>
+            <button name="inserir" class="btn btn-primary">Inserir</button>
             <button name="voltar" class="btn btn-primary">Voltar</button>
         </form>  
     </div>
